@@ -1,0 +1,45 @@
+C51 COMPILER V9.56.0.0   MAIN                                                              12/14/2016 23:58:02 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          /*第二版半？算啦~
+   2            Good luck~~~
+   3            By Aspirin
+   4            2016年12月14日21:47:28  */
+   5          #include "extern_function.c"
+   6          
+   7          //主程序
+   8          void main(void)
+   9          {
+  10   1      
+  11   1        LCD_init();   //初始化LCD12864
+  12   1        Timer_Init();   //初始化定时器
+  13   1        LCD_Putstring(4,1,a);   //打印一下“萌萌哒”
+  14   1        Display_Weekday();    //先算一下周几嘛，省得刷新
+  15   1        while(1)                  //循环
+  16   1          {
+  17   2            //Check_Alarm();    //检查闹钟
+  18   2            KEY_Mode_Set();   //检测按键切换模式
+  19   2            Mode_Set();   //根据按键输入判断模式
+  20   2          }
+  21   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   3057    ----
+   CONSTANT SIZE    =    125    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     63       3
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      3    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
